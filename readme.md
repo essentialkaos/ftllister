@@ -1,4 +1,4 @@
-## FTLLister
+## FTLLister [![License](https://gh.kaos.io/ekol.svg)](https://essentialkaos.com/ekol)
 
 `FTLLister` (_faster-than-light lister_) is utility for listing directories with huge amounts of files (several millions).
 
