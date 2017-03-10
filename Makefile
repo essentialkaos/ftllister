@@ -1,24 +1,25 @@
 ########################################################################################
 
-CC?=gcc
 DESTDIR?=
 PREFIX?=/usr
 
 ########################################################################################
 
-.PHONY = all bin clean install uninstall
+.PHONY = all clean install uninstall
 
 ########################################################################################
 
-bin:
-	$(CC) -O3 -o fls ftllister.c
+all: ftllister
+
+ftllister:
+	$(CC) -O3 -o ftllister ftllister.c
 
 install:
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp fls $(DESTDIR)$(PREFIX)/bin/
+	cp ftllister $(DESTDIR)$(PREFIX)/bin/ftllister
 
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/bin/fls
+	rm -f $(DESTDIR)$(PREFIX)/bin/ftllister
 
 clean:
-	rm -f fls
+	rm -f ftllister
